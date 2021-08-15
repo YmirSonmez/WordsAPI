@@ -15,7 +15,7 @@ public class YourChecker implements IChecker {
 
     @Override
     public Locale getLocale() {
-        return Locale.;
+        return Locale;
     }
 ```
 ```JAVA
@@ -42,15 +42,8 @@ ERROR - Game not started or game finished or word contains another characters
 ```
 ###### Custom Finish 
 ```JAVA
-public class MyGame extends WordGame{
-    public MyGame(IChecker checker, int countDown) {
-        super(checker, countDown);
-    }
-
-    @Override
-    public void onFinish(WordGameResults results) {
-        //Your code
-    }
-}
+WordGame game = getNewWordGame(IChecker,countDown,(results -> {
+        //Your Code
+}));
 ```
 ###### Contact : ![](https://discord-md-badge.vercel.app/api/shield/310707683990962176)

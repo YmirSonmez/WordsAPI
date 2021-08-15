@@ -1,5 +1,6 @@
 package me.ymir.wa.games.wordgame;
 
+import me.ymir.wa.WordsAPI;
 import me.ymir.wa.checkers.CheckerManager;
 import me.ymir.wa.checkers.IChecker;
 
@@ -77,7 +78,9 @@ public class WordGame {
         results.setScores(scores);
         results.setUsed(used);
         System.out.println(room+" finished...");
-        onFinish(results);
+        if(WordsAPI.specialFinish.containsKey(room)){
+            WordsAPI.specialFinish.remove(room).handle(results);
+        }
     }
 
     public Long getRoom() {
@@ -88,8 +91,5 @@ public class WordGame {
         return String.valueOf(last.charAt(last.length()-1));
     }
 
-    public void onFinish(WordGameResults results){
-
-    }
 
 }
