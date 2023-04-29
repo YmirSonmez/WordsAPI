@@ -46,4 +46,4 @@ WordGame game = getNewWordGame(IChecker,countDown,(results -> {
         //Your Code
 }));
 ```
-###### Contact : ![](https://discord-md-badge.vercel.app/api/shield/310707683990962176)
+###### Contact-Discord: YmirSG#5599
